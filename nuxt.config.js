@@ -1,3 +1,5 @@
+const StyleLintPlugin = require("stylelint-webpack-plugin");
+
 export default {
   /*
    ** Nuxt target
@@ -101,7 +103,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['@/assets/scss/main.scss'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -120,6 +122,7 @@ export default {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/style-resources',
   ],
   /*
    ** Nuxt.js modules
@@ -140,9 +143,29 @@ export default {
    ** See https://content.nuxtjs.org/configuration
    */
   content: {},
+
+  styleResources: {
+    scss: [
+      './assets/scss/abstracts/_variables.scss',
+      './assets/scss/abstracts/_mixins.scss', // use underscore "_" & also file extension ".scss"
+    ],
+  },
+
+  stylelint: {
+    fix: true,
+  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    extend(config, { isDev, isClient }) {
+      // SCSS Stylelint
+      config.plugins.push(
+        new StyleLintPlugin({
+          syntax: 'scss',
+        })
+      )
+    },
+  },
 }

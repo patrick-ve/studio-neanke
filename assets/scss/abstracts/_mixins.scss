@@ -1,0 +1,92 @@
+@mixin centerAbsolute {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin centerFlex {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin resetButtonStyles {
+	width: auto;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+
+	/* inherit font & color from ancestor */
+	color: inherit;
+	font: inherit;
+
+	/* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+	line-height: normal;
+	background: transparent;
+	border: none;
+
+	/* Corrects inability to style clickable `input` types in iOS */
+	-webkit-appearance: none;
+
+	/* Corrects font smoothing for webkit */
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
+}
+
+@mixin phone {
+	@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+		@content;
+	}
+}
+
+$breakpoints: (
+	"phone":        400px,
+	"phone-wide":   480px,
+	"phablet":      560px,
+	"tablet-small": 640px,
+	"tablet":       768px,
+	"tablet-wide":  1024px,
+	"desktop":      1248px,
+	"desktop-wide": 1440px
+);
+
+@mixin mq($width, $type: min) {
+	@if map_has_key($breakpoints, $width) {
+		$width: map_get($breakpoints, $width);
+		@if $type == max {
+			$width: $width - 1px;
+		}
+		@media only screen and (#{$type}-width: $width) {
+			@content;
+		}
+	}
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+	position: $pos;
+	display: $display;
+	content: $content;
+}
+
+@mixin centerAbsolute {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin centerGrid {
+	display: grid;
+	place-items: center;
+}
+
+@mixin resetButtonStyles {
+	padding: 0;
+	color: inherit;
+	font: inherit;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
