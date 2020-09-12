@@ -7,6 +7,7 @@
 
 <style lang="scss" scoped>
 .header {
+  position: relative;
   height: 10vh;
   width: 80vw;
   padding-left: 10vw;

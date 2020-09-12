@@ -26,7 +26,7 @@
         alt="Image of border"
       />
       <img
-        class="container__image container__image--boom"
+        class="container__image container__image--boom js-boom"
         src="@/assets/images/boom.png"
         alt="Image of BOOM!"
       />
@@ -46,6 +46,7 @@ export default {
     heroAnimation() {
       const greeting = this.$el.querySelector('.js-greeting')
       const sparkles = this.$el.querySelector('.js-sparkles')
+      const boom = this.$el.querySelector('.js-boom')
 
       gsap.from(greeting, {
         autoAlpha: 0,
@@ -62,6 +63,16 @@ export default {
         ease: 'power1.inOut',
         duration: 0.6,
       })
+
+      gsap.from(boom, {
+        autoAlpha: 0,
+        ease: 'power1.inOut',
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: boom,
+          start: '0% 50%',
+        },
+      })
     },
   },
 }
@@ -69,8 +80,10 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+  position: relative;
   width: 100vw;
   height: 100%;
+  z-index: 5;
   overflow: hidden;
 
   &__title {
@@ -140,7 +153,7 @@ export default {
 
     &--boom {
       position: absolute;
-      bottom: 1.25rem;
+      bottom: 1.65rem;
       left: 8vw;
       width: 9rem;
     }
