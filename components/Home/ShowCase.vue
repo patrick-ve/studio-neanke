@@ -118,7 +118,7 @@ export default {
   width: 100vw;
   height: 100%;
   z-index: 10;
-  overflow: visible;
+  overflow-y: visible;
 
   &__image {
     max-width: 100vw;
