@@ -19,14 +19,36 @@
       class="container__visual container__visual--yeah"
       src="@/assets/images/ohyeah.png"
     />
+    <img
+      class="container__visual container__visual--hand js-hand"
+      src="@/assets/images/illustratie-54.svg"
+    />
   </section>
 </template>
 
 <script>
 import { gsap } from 'gsap'
+
 export default {
   mounted() {
-    gsap.core()
+    this.animationHandler()
+  },
+
+  methods: {
+    animationHandler() {
+      const hand = this.$el.querySelector('.js-hand')
+
+      gsap.from(hand, {
+        autoAlpha: 0,
+        yPercent: 100,
+        ease: 'power1.inOut',
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: hand,
+          start: '0% 95%',
+        },
+      })
+    },
   },
 }
 </script>
@@ -34,7 +56,9 @@ export default {
 <style lang="scss" scoped>
 .container {
   width: 100vw;
+  max-width: 100vw !important;
   height: 100%;
+  overflow: hidden;
 
   &__heading {
     color: $color-navy;
@@ -71,6 +95,12 @@ export default {
       top: 23.5rem;
       right: 1rem;
       width: 50vw;
+    }
+
+    &--hand {
+      width: 100vw;
+      display: block;
+      margin: 0 auto -0.5rem auto;
     }
   }
 }

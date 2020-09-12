@@ -8,9 +8,9 @@
 body {
   position: relative;
   width: 100vw;
-  max-width: 100vw;
+  max-width: 100vw !important;
   height: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   font-weight: normal;
   font-size: $font-size-medium;
   font-family: $font-regular;

@@ -4,6 +4,7 @@
     <Hero />
     <ShowCase />
     <CallToAction />
+    <Footer />
   </div>
 </template>
 
