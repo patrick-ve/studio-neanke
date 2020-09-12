@@ -15,6 +15,21 @@
         src="@/assets/images/text.png"
         alt="Hello, my name is Neanke!"
       />
+      <img
+        class="container__image container__image--sparkles js-sparkles"
+        src="@/assets/images/sparkles.png"
+        alt="Image of sparkles"
+      />
+      <img
+        class="container__image container__image--border"
+        src="@/assets/images/illustratie-39.svg"
+        alt="Image of border"
+      />
+      <img
+        class="container__image container__image--boom"
+        src="@/assets/images/boom.png"
+        alt="Image of BOOM!"
+      />
     </div>
   </main>
 </template>
@@ -30,14 +45,22 @@ export default {
   methods: {
     heroAnimation() {
       const greeting = this.$el.querySelector('.js-greeting')
-      const tl = gsap.timeline()
-      tl.from(greeting, {
+      const sparkles = this.$el.querySelector('.js-sparkles')
+
+      gsap.from(greeting, {
         autoAlpha: 0,
         rotation: -125,
-        // rotate: 190,
         ease: 'power1.inOut',
         duration: 0.8,
         delay: 1.2,
+      })
+
+      gsap.from(sparkles, {
+        y: '10px',
+        yoyo: true,
+        repeat: -1,
+        ease: 'power1.inOut',
+        duration: 0.6,
       })
     },
   },
@@ -64,19 +87,7 @@ export default {
   }
 
   &__link {
-    color: white;
-    text-transform: uppercase;
-    font-size: $font-size-small;
-    font-family: $font-regular;
-    background-color: $color-navy;
-    width: 55vw;
-    padding: 4.5vw 10vw;
-    border-radius: 1.5rem;
-    margin-left: 10vw;
-    letter-spacing: 2px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
-      0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
-      0 16px 16px rgba(0, 0, 0, 0.12);
+    @include ctaButtonStyles;
   }
 
   &__gallery {
@@ -88,12 +99,14 @@ export default {
 
   &__image {
     max-width: 100vw;
+    width: 100%;
     height: auto;
+    object-fit: cover;
     z-index: 6;
 
     &--neanke {
-      position: relative;
-      top: 10vh;
+      position: absolute;
+      bottom: 0;
       left: 20vw;
       z-index: 8;
     }
@@ -106,6 +119,30 @@ export default {
       transform: rotate(0);
       transform-origin: center right;
       z-index: 7;
+    }
+
+    &--sparkles {
+      width: 25vw;
+      height: auto;
+      position: absolute;
+      left: 20vw;
+      top: 15rem;
+    }
+
+    &--border {
+      position: absolute;
+      top: 14rem;
+      left: 0;
+      width: 100vw;
+      height: auto;
+      transform: scale(2) translateX(-20vw) translateY(2.5vh);
+    }
+
+    &--boom {
+      position: absolute;
+      bottom: 1.25rem;
+      left: 8vw;
+      width: 9rem;
     }
   }
 }

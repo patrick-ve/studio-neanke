@@ -20,6 +20,10 @@ export default {
         name: 'description',
         content: 'Portfolio Website for Studio Neanke',
       },
+      {
+        name: 'theme-color',
+        content: '#6e1c57',
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
