@@ -1,2 +1,6 @@
+@import "base/reset.scss";
+// TODO: Fix weird module loading bug
+// font is unable to load from this directory
+// @import "base/typography.scss";
 @import "abstracts/variables";
 @import "abstracts/mixins";

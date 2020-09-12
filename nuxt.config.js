@@ -1,4 +1,4 @@
-const StyleLintPlugin = require("stylelint-webpack-plugin");
+const StyleLintPlugin = require('stylelint-webpack-plugin')
 
 export default {
   /*
@@ -11,16 +11,14 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || 'Studio Neanke',
+    title: 'Studio Neanke',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content:
-          process.env.npm_package_description ||
-          'Portfolio Website for Studio Neanke',
+        content: 'Portfolio Website for Studio Neanke',
       },
     ],
     link: [
@@ -108,7 +106,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [{ src: '@/plugins/scrollTrigger', ssr: false }],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -147,6 +145,7 @@ export default {
   styleResources: {
     scss: [
       './assets/scss/abstracts/_variables.scss',
+      './assets/scss/base/_typography.scss',
       './assets/scss/abstracts/_mixins.scss', // use underscore "_" & also file extension ".scss"
     ],
   },
