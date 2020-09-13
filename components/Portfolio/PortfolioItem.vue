@@ -9,31 +9,8 @@
 </template>
 
 <script>
-import { gsap } from 'gsap'
-
 export default {
   props: ['data'],
-
-  mounted() {
-    this.animationHandler()
-  },
-
-  methods: {
-    animationHandler() {
-      const image = this.$el.querySelector('.js-image')
-
-      gsap.from(image, {
-        autoAlpha: 0,
-        yPercent: 20,
-        ease: 'power1.inOut',
-        duration: 0.8,
-        scrollTrigger: {
-          trigger: image,
-          start: '50% 80%',
-        },
-      })
-    },
-  },
 }
 </script>
 

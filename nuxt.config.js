@@ -23,7 +23,7 @@ export default {
       {
         name: 'theme-color',
         content: '#6e1c57',
-      }
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -110,7 +110,10 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [{ src: '@/plugins/scrollTrigger', ssr: false }],
+  plugins: [
+    { src: '@/plugins/scrollTrigger', ssr: false },
+    { src: '@/plugins/scrollTo', ssr: false },
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
