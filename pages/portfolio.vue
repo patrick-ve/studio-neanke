@@ -98,6 +98,7 @@ export default {
     font-family: $font-black;
     font-size: $font-size-large;
     padding: 10vw 10vw 5vw 10vw;
+    text-transform: uppercase;
   }
 }
 </style>

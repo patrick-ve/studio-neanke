@@ -45,11 +45,7 @@ export default {
 .container {
   width: 80vw;
   height: 10rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-self: start;
+  display: inline-block;
   padding-left: 10vw;
 
   &__button {
@@ -61,7 +57,7 @@ export default {
     width: auto;
     font-size: $font-size-xsmall;
     padding: 3vw 5vw;
-    margin: 0.5rem auto;
+    margin: 0.5rem 0.25rem 0.5rem 0;
   }
 }
 </style>
