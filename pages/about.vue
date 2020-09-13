@@ -47,6 +47,7 @@
       </div>
     </div>
     <nuxt-link class="link" to="/contact">Get in touch</nuxt-link>
+    <VisualSegment />
     <Footer />
   </section>
 </template>
@@ -166,11 +167,11 @@ export default {
       z-index: 2;
 
       &::before {
-        content: '';
+        content: 'Yes';
         position: absolute;
-        width: 9999px;
-        height: 9999px;
-        background-color: red;
+        width: 100vw;
+        height: 10rem;
+        object-fit: cover;
         top: -2px;
         left: -10px;
         z-index: 1;
