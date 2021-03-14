@@ -1,0 +1,74 @@
+{
+  "CallToAction": {
+    "description": "Auto imported from components/About/CallToAction.vue"
+  },
+  "LazyCallToAction": {
+    "description": "Auto imported from components/About/CallToAction.vue"
+  },
+  "VisualSegment": {
+    "description": "Auto imported from components/About/VisualSegment.vue"
+  },
+  "LazyVisualSegment": {
+    "description": "Auto imported from components/About/VisualSegment.vue"
+  },
+  "FilterButtons": {
+    "description": "Auto imported from components/Portfolio/FilterButtons.vue"
+  },
+  "LazyFilterButtons": {
+    "description": "Auto imported from components/Portfolio/FilterButtons.vue"
+  },
+  "PortfolioItem": {
+    "description": "Auto imported from components/Portfolio/PortfolioItem.vue"
+  },
+  "LazyPortfolioItem": {
+    "description": "Auto imported from components/Portfolio/PortfolioItem.vue"
+  },
+  "Hero": {
+    "description": "Auto imported from components/Home/Hero.vue"
+  },
+  "LazyHero": {
+    "description": "Auto imported from components/Home/Hero.vue"
+  },
+  "ShowCase": {
+    "description": "Auto imported from components/Home/ShowCase.vue"
+  },
+  "LazyShowCase": {
+    "description": "Auto imported from components/Home/ShowCase.vue"
+  },
+  "DribbleLogo": {
+    "description": "Auto imported from components/UI/DribbleLogo.vue"
+  },
+  "LazyDribbleLogo": {
+    "description": "Auto imported from components/UI/DribbleLogo.vue"
+  },
+  "Footer": {
+    "description": "Auto imported from components/UI/Footer.vue"
+  },
+  "LazyFooter": {
+    "description": "Auto imported from components/UI/Footer.vue"
+  },
+  "Header": {
+    "description": "Auto imported from components/UI/Header.vue"
+  },
+  "LazyHeader": {
+    "description": "Auto imported from components/UI/Header.vue"
+  },
+  "InstagramLogo": {
+    "description": "Auto imported from components/UI/InstagramLogo.vue"
+  },
+  "LazyInstagramLogo": {
+    "description": "Auto imported from components/UI/InstagramLogo.vue"
+  },
+  "LinkedInLogo": {
+    "description": "Auto imported from components/UI/LinkedInLogo.vue"
+  },
+  "LazyLinkedInLogo": {
+    "description": "Auto imported from components/UI/LinkedInLogo.vue"
+  },
+  "Logo": {
+    "description": "Auto imported from components/UI/Logo.vue"
+  },
+  "LazyLogo": {
+    "description": "Auto imported from components/UI/Logo.vue"
+  }
+}

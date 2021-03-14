@@ -1,0 +1,44 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/patrickvaneverdingen/Desktop/projecten/studio-neanke/pages/about.vue",
+    "chunkName": "pages/about",
+    "_name": "_14891d57"
+  },
+  {
+    "name": "contact",
+    "path": "/contact",
+    "component": "/Users/patrickvaneverdingen/Desktop/projecten/studio-neanke/pages/contact.vue",
+    "chunkName": "pages/contact",
+    "_name": "_1933f7ea"
+  },
+  {
+    "name": "portfolio",
+    "path": "/portfolio",
+    "component": "/Users/patrickvaneverdingen/Desktop/projecten/studio-neanke/pages/portfolio.vue",
+    "chunkName": "pages/portfolio",
+    "_name": "_e5a4fedc"
+  },
+  {
+    "name": "projects-studio-neanke",
+    "path": "/projects/studio-neanke",
+    "component": "/Users/patrickvaneverdingen/Desktop/projecten/studio-neanke/pages/projects/studio-neanke.vue",
+    "chunkName": "pages/projects/studio-neanke",
+    "_name": "_2831f6a6"
+  },
+  {
+    "name": "projects-id",
+    "path": "/projects/:id?",
+    "component": "/Users/patrickvaneverdingen/Desktop/projecten/studio-neanke/pages/projects/_id.vue",
+    "chunkName": "pages/projects/_id",
+    "_name": "_d7c49e6a"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/patrickvaneverdingen/Desktop/projecten/studio-neanke/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_3440f81c"
+  }
+]
